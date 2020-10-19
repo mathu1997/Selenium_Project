@@ -31,7 +31,12 @@ class icmrProcess():
         self.datadict = datadict
         self.uname = "GDHHNKTN"
         self.pas = "GDHHNKTN@icmr"
-        self.br = webdriver.Chrome(executable_path="C:\Program Files\chromedriver")
+        op = webdriver.ChromeOptions()
+        op.add_argument('--headless')
+        op.add_argument('--no-sandbox')
+        op.add_argument('--disable-dev-shm-usage')
+        op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+        self.br = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=op)
         self.personObject = []
         self.tag = tag
         self.createEntries()
