@@ -1,4 +1,3 @@
-import sample
 import random
 import time
 import re
