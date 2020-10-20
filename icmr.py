@@ -12,7 +12,7 @@ from os import path
 from os import listdir
 from os.path import isfile, join
 
-resultData = 'DataRemains\ResultData.txt'
+resultData = 'DataRemains/ResultData.txt'
 
 def readFile():
     f = open(resultData,'r')
@@ -195,7 +195,7 @@ if not (path.exists(resultData)):
         print('File Name: ', file)
         start = input('Enter start : ')
         end = input('Enter end : ')
-        datadict.append(getXlData('DataFolder\\'+file,start,end))
+        datadict.append(getXlData('DataFolder/'+file,start,end))
     datadict = [i for j in datadict for i in j]
 else:
     for file in listdir('DataRemains'):
