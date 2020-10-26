@@ -4,8 +4,7 @@ import xlrd
 import threading
 import multiprocessing
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from webdriver_manager.chrome import ChromeDriverManager 
+from selenium.webdriver.common.keys import Keys 
 import os
 import os.path
 from os import path
